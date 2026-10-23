@@ -6,7 +6,6 @@ public class Java3 {
 
         Scanner teclado = new Scanner(System.in);
         System.out.println("Introduce un número");
-        //
         double n1 = teclado.nextFloat();
 
         if (n1 > 0){
