@@ -10,27 +10,28 @@ public class Ejerciciodelratón {
         int altura = teclado.nextInt();
         System.out.println("Leyendo altura...");
 
-        if(altura < 140) {
+        if(altura < 140 && altura >= 0) {
             int alturaquefalta = 140 - altura;
             System.out.println("LO SIENTO, NO PUEDES MONTAR EN LA ATRACCIÓN, TE FALTAN " + alturaquefalta + " cm");}
         else {
-            if(altura >= 230) {
+            if(altura > 230 || altura < 0) {
                 System.out.println("ERROR DE LECTURA, BAJA DE LA BÁSCULA Y VUELVE A SUBIR...");
             }else{
                 System.out.println("Ahora introduce tu peso en kg: ");
-            }
-            int peso = teclado.nextInt();
-            System.out.println("Leyendo peso...");
+                int peso = teclado.nextInt();
+                System.out.println("Leyendo peso...");
 
-            int pesomínimo = altura * 2/8;
-            System.out.println("PESO MÍNIMO CALCULADO: " + pesomínimo + " KG");
-            if(peso <= (altura * 2/8)){
-            System.out.println("LO SIENTO, ESTÁS POR DEBAJO DE TU PESO MÍNIMO, NO PUEDES SUBIR, TE FALTAN " + (pesomínimo - peso) + " KG");}
-            else {
-                if(peso > 120) {
-                System.out.println("LO SIENTO, SOBREPASAS " + (peso - 120) + " KG EL PESO DE LA ATRACCIÓN");
-                }else {
-                    System.out.println("Pesas " + peso + " KG y mides " + altura + " cm " + ". ¡SUBE A LA ATRACCIÓN!");}
+                int pesomínimo = altura * 2/8;
+                System.out.println("PESO MÍNIMO CALCULADO: " + pesomínimo + " KG");
+                if(peso <= (altura * 2/8)){
+                    System.out.println("LO SIENTO, ESTÁS POR DEBAJO DE TU PESO MÍNIMO, NO PUEDES SUBIR, TE FALTAN " + (pesomínimo - peso) + " KG");}
+                else {
+                    if(peso > 120) {
+                        System.out.println("LO SIENTO, SOBREPASAS " + (peso - 120) + " KG EL PESO DE LA ATRACCIÓN");
+                    }else {
+                        System.out.println("Pesas " + peso + " KG y mides " + altura + " cm " + ". ¡SUBE A LA ATRACCIÓN!");}
+            }
+
 
 
 
